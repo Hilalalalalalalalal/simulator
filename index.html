@@ -4,41 +4,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Telecom Simulator Pro</title>
+    <meta name="description" content="ירון חנן — מומחה לניהול סיכונים ומנהיגות בזמן חירום. הרצאות, סדנאות וייעוץ ארגוני לארגונים ומנהלים בישראל." />
+    <title>ירון חנן | מומחה לניהול סיכונים ומנהיגות בזמן חירום</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700;900&family=Assistant:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: 'Assistant', sans-serif;
-        background-color: #000;
+        background-color: #070714;
         color: #fff;
         margin: 0;
         overflow-x: hidden;
       }
-      .neon-border {
-        box-shadow: 0 0 10px rgba(0, 255, 255, 0.4), 0 0 20px rgba(0, 255, 255, 0.2);
+      h1, h2, h3, h4 {
+        font-family: 'Heebo', sans-serif;
       }
-      .neon-text-cyan {
-        text-shadow: 0 0 8px rgba(34, 211, 238, 0.8);
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        33% { transform: translateY(-18px) rotate(2deg); }
+        66% { transform: translateY(-8px) rotate(-1deg); }
       }
-      .neon-text-pink {
-        text-shadow: 0 0 8px rgba(236, 72, 153, 0.8);
+      @keyframes float2 {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-24px) rotate(-3deg); }
       }
-      ::-webkit-scrollbar {
-        width: 8px;
+      @keyframes shimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
       }
-      ::-webkit-scrollbar-track {
-        background: #111;
+      @keyframes gradient-shift {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
       }
-      ::-webkit-scrollbar-thumb {
-        background: #333;
-        border-radius: 4px;
+      @keyframes fade-up {
+        from { opacity: 0; transform: translateY(32px); }
+        to { opacity: 1; transform: translateY(0); }
       }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #444;
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 20px rgba(255, 107, 53, 0.35), 0 4px 20px rgba(255, 107, 53, 0.2); }
+        50% { box-shadow: 0 0 40px rgba(255, 107, 53, 0.65), 0 4px 40px rgba(255, 107, 53, 0.35); }
       }
+      @keyframes spin-slow {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes counter-in {
+        from { opacity: 0; transform: scale(0.5); }
+        to { opacity: 1; transform: scale(1); }
+      }
+
+      .animate-float { animation: float 6s ease-in-out infinite; }
+      .animate-float2 { animation: float2 8s ease-in-out infinite; }
+      .animate-float3 { animation: float 5s ease-in-out infinite reverse; }
+      .animate-float4 { animation: float2 7s ease-in-out infinite reverse; }
+      .animate-fade-up { animation: fade-up 0.7s ease-out forwards; }
+      .animate-pulse-glow { animation: pulse-glow 2.5s ease-in-out infinite; }
+      .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+      .gradient-text {
+        background: linear-gradient(90deg, #FF6B35, #FFD60A, #ffffff);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradient-shift 4s ease infinite;
+      }
+      .gradient-text-orange {
+        background: linear-gradient(90deg, #FF6B35, #FFD60A);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .card-hover {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-6px);
+      }
+
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #070714; }
+      ::-webkit-scrollbar-thumb { background: #2a2a5a; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #FF6B35; }
     </style>
   <script type="importmap">
 {
