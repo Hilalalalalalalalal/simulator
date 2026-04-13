@@ -105,11 +105,12 @@ const Services: React.FC = () => {
               key={i}
               className="rounded-2xl p-8 card-hover relative overflow-hidden group cursor-default"
               style={{
-                background: svc.bgColor,
+                background: `linear-gradient(145deg, ${svc.bgColor}, rgba(7,7,20,0.5))`,
                 border: `1px solid ${svc.borderColor}`,
+                backdropFilter: 'blur(10px)',
               }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = `0 20px 50px ${svc.glowColor}`;
+                (e.currentTarget as HTMLElement).style.boxShadow = `0 24px 60px ${svc.glowColor}, inset 0 1px 0 rgba(255,255,255,0.05)`;
                 (e.currentTarget as HTMLElement).style.borderColor = svc.color;
               }}
               onMouseLeave={(e) => {
@@ -117,10 +118,10 @@ const Services: React.FC = () => {
                 (e.currentTarget as HTMLElement).style.borderColor = svc.borderColor;
               }}
             >
-              {/* Top border accent */}
+              {/* Top border accent — gradient */}
               <div
-                className="absolute top-0 right-0 left-0 h-0.5 rounded-t-2xl"
-                style={{ backgroundColor: svc.color }}
+                className="absolute top-0 right-0 left-0 h-[2px] rounded-t-2xl"
+                style={{ background: `linear-gradient(90deg, transparent, ${svc.color}, transparent)` }}
               />
 
               {/* Icon */}

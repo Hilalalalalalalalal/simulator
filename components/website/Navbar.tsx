@@ -19,10 +19,13 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
     <header
       className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'backdrop-blur-md shadow-lg shadow-black/30'
+          ? 'backdrop-blur-md shadow-lg shadow-black/40'
           : 'bg-transparent'
       }`}
-      style={scrolled ? { backgroundColor: 'rgba(7,7,20,0.95)' } : {}}
+      style={{
+        marginTop: '3px', /* below the accent bar */
+        ...(scrolled ? { backgroundColor: 'rgba(4,4,16,0.96)', borderBottom: '1px solid rgba(255,107,53,0.1)' } : {}),
+      }}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
         {/* Logo */}

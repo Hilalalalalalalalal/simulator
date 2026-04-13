@@ -57,23 +57,24 @@ const WhyMe: React.FC = () => {
                 key={i}
                 className="rounded-2xl p-7 text-center card-hover relative overflow-hidden"
                 style={{
-                  background: 'rgba(15,15,46,0.6)',
-                  border: `1px solid ${stat.color}22`,
-                  backdropFilter: 'blur(12px)',
+                  background: 'linear-gradient(145deg, rgba(15,15,46,0.7), rgba(7,7,20,0.5))',
+                  border: `1px solid ${stat.color}28`,
+                  backdropFilter: 'blur(14px)',
+                  boxShadow: `inset 0 1px 0 rgba(255,255,255,0.04)`,
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = `${stat.color}55`;
-                  (e.currentTarget as HTMLElement).style.boxShadow = `0 12px 40px ${stat.color}22`;
+                  (e.currentTarget as HTMLElement).style.borderColor = `${stat.color}60`;
+                  (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 48px ${stat.color}25, inset 0 1px 0 rgba(255,255,255,0.06)`;
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = `${stat.color}22`;
-                  (e.currentTarget as HTMLElement).style.boxShadow = '';
+                  (e.currentTarget as HTMLElement).style.borderColor = `${stat.color}28`;
+                  (e.currentTarget as HTMLElement).style.boxShadow = `inset 0 1px 0 rgba(255,255,255,0.04)`;
                 }}
               >
-                {/* Background glow */}
+                {/* Corner accent */}
                 <div
-                  className="absolute inset-0 pointer-events-none opacity-5 rounded-2xl"
-                  style={{ background: `radial-gradient(circle at center, ${stat.color}, transparent 70%)` }}
+                  className="absolute top-0 right-0 w-16 h-16 pointer-events-none rounded-tl-2xl"
+                  style={{ background: `radial-gradient(circle at top right, ${stat.color}22, transparent 70%)` }}
                 />
                 <div
                   className="text-4xl md:text-5xl font-black mb-2 relative z-10"
@@ -81,7 +82,7 @@ const WhyMe: React.FC = () => {
                 >
                   {stat.number}
                 </div>
-                <div className="text-sm font-semibold relative z-10" style={{ color: '#A0AEC0' }}>
+                <div className="text-sm font-semibold relative z-10" style={{ color: '#718096' }}>
                   {stat.label}
                 </div>
               </div>
