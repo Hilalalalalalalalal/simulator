@@ -10,7 +10,8 @@ const Navbar: React.FC<NavbarProps> = ({ scrolled }) => {
   const navLinks = [
     { href: '#about', label: 'אודות' },
     { href: '#services', label: 'שירותים' },
-    { href: '#why-me', label: 'למה ירון' },
+    { href: '#learning', label: 'לומדה' },
+    { href: '#articles', label: 'מאמרים' },
     { href: '#testimonials', label: 'המלצות' },
     { href: '#contact', label: 'צור קשר' },
   ];

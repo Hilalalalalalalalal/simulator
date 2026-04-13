@@ -4,7 +4,8 @@ const Footer: React.FC = () => {
   const quickLinks = [
     { href: '#about', label: 'אודות' },
     { href: '#services', label: 'שירותים' },
-    { href: '#why-me', label: 'למה ירון' },
+    { href: '#learning', label: 'לומדה' },
+    { href: '#articles', label: 'מאמרים' },
     { href: '#testimonials', label: 'המלצות' },
     { href: '#contact', label: 'צור קשר' },
   ];
